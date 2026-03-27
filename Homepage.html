@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonStrike Studios | Oyun Stüdyosu Vitrini</title>
+
+    <!-- Bootstrap (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Proje stilleri -->
+    <link rel="stylesheet" href="./Style.Css">
+
+    <!-- Bootstrap bundle (Popper dahil) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Açılış yükleme ekranı -->
+    <div id="nsLoader" class="ns-loader" aria-busy="true" aria-live="polite">
+        <div class="ns-loader-inner">
+            <span class="ns-loader-logo" aria-hidden="true"></span>
+            <div class="ns-loader-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Yükleniyor">
+                <span class="ns-loader-bar-fill"></span>
+            </div>
+            <p class="ns-loader-text">NeonStrike Studios</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ns-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+                <img class="ns-logo" src="./logo.png" alt="NeonStrike Studios Logo">
+                <span class="fw-semibold">NeonStrike Studios</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nsNavbar" aria-controls="nsNavbar" aria-expanded="false" aria-label="Gezinmeyi aç/kapat">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nsNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ns-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#media">Media Hub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#games">Oyunlar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Hizmetler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Ekip</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0">
+                    <a class="btn btn-sm btn-outline-light ns-outline" href="#games">Fragmanlar</a>
+                    <a class="btn btn-sm btn-neon" href="#contact">Teklif Al</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="top" class="ns-hero pt-5">
+        <div class="container pt-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <div class="ns-badge mb-3">Yeni nesil oyun stüdyosu</div>
+                    <h1 class="display-5 fw-bold ns-hero-title">
+                        NeonStrike Studios ile
+                        <span class="ns-text-gradient">geleceği vur.</span>
+                    </h1>
+                    <p class="lead ns-hero-subtitle mb-4">
+                        Tasarım, geliştirme ve yayın süreçlerinde deneyimli ekibimizle; PC, mobil ve cross-platform oyunlar inşa ediyoruz.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3">
+                        <a class="btn btn-neon px-4" href="#games" data-ns-scroll>Oyunları Keşfet</a>
+                        <a class="btn btn-outline-light px-4 ns-outline" href="#contact" data-ns-scroll>Bize Ulaş</a>
+                    </div>
+
+                    <div class="ns-hero-stats mt-4">
+                        <div class="row g-3">
+                            <div class="col-4">
+                                <div class="ns-stat">
+                                    <div class="ns-stat-value">+10</div>
+                                    <div class="ns-stat-label">Proje</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="ns-stat">
+                                    <div class="ns-stat-value">3</div>
+                                    <div class="ns-stat-label">Platform</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="ns-stat">
+                                    <div class="ns-stat-value">%95</div>
+                                    <div class="ns-stat-label">Memnuniyet</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="ns-hero-card p-3 p-md-4">
+                        <div class="ns-hero-card-top d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="ns-dot ns-dot-1"></span>
+                                <span class="ns-dot ns-dot-2"></span>
+                                <span class="ns-dot ns-dot-3"></span>
+                            </div>
+                            <span class="ns-hero-card-title">Stüdyo Paneli</span>
+                        </div>
+
+                        <div class="ns-console mt-3" role="status" aria-live="polite">
+                            <div class="ns-console-line">[boot] neon core... ok</div>
+                            <div class="ns-console-line">[build] level pipeline... ok</div>
+                            <div class="ns-console-line">[deploy] upcoming trailer... pending</div>
+                        </div>
+
+                        <div class="mt-3 d-grid gap-2">
+                            <a class="btn btn-neon" href="#contact" data-ns-scroll>Haydi Projeni Konuşalım!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="ns-section py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <div class="ns-section-title">Hakkımızda</div>
+                    <h2 class="h3 fw-bold mb-3">NeonStrike Studios: oyunları hızla gerçeğe dönüştürür.</h2>
+                    <p class="text-muted mb-4">
+                        Fikir aşamasından prototipe, prodüksiyondan yayına kadar tüm süreci uçtan uca yönetiyor;
+                        net hedefler, sürdürülebilir üretim ve güçlü oynanabilirlik odaklı bir yaklaşım benimsiyoruz.
+                    </p>
+
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="ns-feature">
+                                <div class="ns-feature-icon">01</div>
+                                <div>
+                                    <div class="fw-semibold">Gameplay Odaklı Tasarım</div>
+                                    <div class="text-muted ns-small">Mekanikleri erken doğrularız.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ns-feature">
+                                <div class="ns-feature-icon">02</div>
+                                <div>
+                                    <div class="fw-semibold">Modüler Üretim</div>
+                                    <div class="text-muted ns-small">Ekip içinde hızlı iterasyon.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ns-feature">
+                                <div class="ns-feature-icon">03</div>
+                                <div>
+                                    <div class="fw-semibold">Performans ve Kalite</div>
+                                    <div class="text-muted ns-small">FPS, optimizasyon, iyileştirme.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="ns-feature">
+                                <div class="ns-feature-icon">04</div>
+                                <div>
+                                    <div class="fw-semibold">Topluluk İletişimi</div>
+                                    <div class="text-muted ns-small">Geri bildirimle büyürüz.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="ns-about-visual">
+                        <div class="ns-about-visual-inner">
+                            <div class="ns-about-visual-title">NeonStrike</div>
+                            <div class="ns-about-visual-subtitle">Light • Motion • Gameplay</div>
+                        </div>
+                        <div class="ns-about-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Hub -->
+    <section id="media" class="ns-section py-5">
+        <div class="container">
+            <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4">
+                <div>
+                    <div class="ns-section-title">Media Hub</div>
+                    <h2 class="h3 fw-bold mb-0">Tanıtım videosu ve ses deneyimi</h2>
+                </div>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-7">
+                    <div class="ns-media-card ns-reveal">
+                        <div class="ns-media-header">
+                            <span class="ns-media-dot"></span>
+                            <span class="fw-semibold">Tanıtım Videosu</span>
+                        </div>
+                        <div class="ratio ratio-16x9 ns-video-frame">
+                            <iframe
+                                src="https://www.youtube.com/embed/_9Y5wPjDSWw?si=3jKbGl_LFwz_VwV7"
+                                title="NeonStrike Studios Tanıtım Videosu"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="ns-media-card ns-reveal">
+                        <div class="ns-media-header">
+                            <span class="ns-media-dot ns-media-dot-2"></span>
+                            <span class="fw-semibold">Audio Preview</span>
+                        </div>
+
+                        <div class="ns-audio-panel">
+                            <audio id="nsAudioPreview" preload="metadata" class="w-100" aria-label="Tanıtım sesi">
+                                <source src="./NeonStrike Studios Tanıtım Sesi Jediah.mp3" type="audio/mpeg">
+                                Tarayıcın audio etiketini desteklemiyor.
+                            </audio>
+
+                            <div class="ns-audio-controls mt-3">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button type="button" class="btn btn-outline-light btn-sm ns-outline" id="nsAudioBack">-10 sn</button>
+                                    <button type="button" class="btn btn-neon btn-sm" id="nsAudioToggle">Oynat</button>
+                                    <button type="button" class="btn btn-outline-light btn-sm ns-outline" id="nsAudioForward">+10 sn</button>
+                                </div>
+                                <div class="ns-audio-time mt-2">
+                                    <span id="nsAudioCurrent">00:00</span>
+                                    <span>/</span>
+                                    <span id="nsAudioDuration">00:00</span>
+                                </div>
+                                <input id="nsAudioSeek" class="form-range ns-audio-seek mt-2" type="range" min="0" max="100" value="0" step="0.1" aria-label="Ses ilerleme çubuğu">
+                            </div>
+
+                            <div class="ns-audio-meta mt-3">
+                                <div class="fw-semibold">NeonStrike Theme Teaser</div>
+                                <div class="text-muted ns-small">Durum: <span id="nsAudioState">Hazır</span></div>
+                            </div>
+
+                            <div class="ns-eq mt-3" aria-hidden="true">
+                                <span></span><span></span><span></span><span></span><span></span>
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games -->
+    <section id="games" class="ns-section ns-section-alt py-5">
+        <div class="container">
+            <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4">
+                <div>
+                    <div class="ns-section-title">Oyunlar</div>
+                    <h2 class="h3 fw-bold mb-0">Yakında / Şu an geliştirmede</h2>
+                </div>
+                <div class="text-muted ns-small">
+                    Kartlar şu an demo içeriklerle dolu. İstersen kendi oyunlarını ve detaylarını buraya birlikte ekleyebiliriz.
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card ns-card h-100">
+                        <div class="ns-card-head">
+                            <div class="ns-card-icon ns-card-icon-1"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 fw-bold">Neon Rush</h3>
+                            <p class="text-muted ns-small mb-3">Hız, kaçış ve duvar tırmanışı temalı aksiyon.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="ns-pill">PC</span>
+                                <span class="ns-pill ns-pill-ghost">Co-Op</span>
+                            </div>
+                            <div class="mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="ns-small text-muted">Geliştirme</span>
+                                    <span class="ns-small fw-semibold">%60</span>
+                                </div>
+                                <div class="progress ns-progress mt-1" role="progressbar" aria-label="Geliştirme yüzdesi" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <button class="btn btn-sm btn-neon w-100" type="button" data-bs-toggle="modal" data-bs-target="#nsGameModal" data-ns-game="Neon Rush">
+                                Detaylar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card ns-card h-100">
+                        <div class="ns-card-head">
+                            <div class="ns-card-icon ns-card-icon-2"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 fw-bold">Strike Arena</h3>
+                            <p class="text-muted ns-small mb-3">Arena savaşları, beceri temelli rekabet.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="ns-pill">Mobil</span>
+                                <span class="ns-pill ns-pill-ghost">PvP</span>
+                            </div>
+                            <div class="mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="ns-small text-muted">Geliştirme</span>
+                                    <span class="ns-small fw-semibold">%35</span>
+                                </div>
+                                <div class="progress ns-progress mt-1" role="progressbar" aria-label="Geliştirme yüzdesi" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 35%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <button class="btn btn-sm btn-neon w-100" type="button" data-bs-toggle="modal" data-bs-target="#nsGameModal" data-ns-game="Strike Arena">
+                                Detaylar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card ns-card h-100">
+                        <div class="ns-card-head">
+                            <div class="ns-card-icon ns-card-icon-3"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 fw-bold">Neon Tactics</h3>
+                            <p class="text-muted ns-small mb-3">Strateji + taktik, hızlı karar anları.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="ns-pill">Cross</span>
+                                <span class="ns-pill ns-pill-ghost">Single</span>
+                            </div>
+                            <div class="mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="ns-small text-muted">Geliştirme</span>
+                                    <span class="ns-small fw-semibold">%20</span>
+                                </div>
+                                <div class="progress ns-progress mt-1" role="progressbar" aria-label="Geliştirme yüzdesi" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <button class="btn btn-sm btn-neon w-100" type="button" data-bs-toggle="modal" data-bs-target="#nsGameModal" data-ns-game="Neon Tactics">
+                                Detaylar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ns-founder-wrap ns-reveal mt-4">
+                <div class="ns-founder-orbit" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="ns-founder-card">
+                    <div class="ns-founder-badge">NeonStrike Leadership</div>
+                    <h3 class="ns-founder-name mb-2">Mustafa Bölükbaş</h3>
+                    <p class="ns-founder-role mb-0">Şirket Yöneticisi ve Sahibi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="ns-section py-5">
+        <div class="container">
+            <div class="ns-section-title mb-3">Hizmetler</div>
+            <h2 class="h3 fw-bold mb-4">İhtiyacına göre stüdyo desteği</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="ns-service">
+                        <div class="ns-service-top">
+                            <div class="ns-service-num">01</div>
+                            <div class="ns-service-title">Oyun Geliştirme</div>
+                        </div>
+                        <div class="text-muted ns-small mt-2">
+                            Prototipten ürünleşmeye; mekanik, seviye tasarımı, optimizasyon ve iterasyon.
+                        </div>
+                        <div class="ns-service-tags mt-3">
+                            <span class="ns-pill">Unity/Unreal</span>
+                            <span class="ns-pill ns-pill-ghost">Multiplatform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="ns-service">
+                        <div class="ns-service-top">
+                            <div class="ns-service-num">02</div>
+                            <div class="ns-service-title">UI/UX & Art Pipeline</div>
+                        </div>
+                        <div class="text-muted ns-small mt-2">
+                            Neon estetik, okunabilirlik ve tutarlı bir görsel dil.
+                        </div>
+                        <div class="ns-service-tags mt-3">
+                            <span class="ns-pill">UI Kit</span>
+                            <span class="ns-pill ns-pill-ghost">VFX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="ns-service">
+                        <div class="ns-service-top">
+                            <div class="ns-service-num">03</div>
+                            <div class="ns-service-title">Yayın & Danışmanlık</div>
+                        </div>
+                        <div class="text-muted ns-small mt-2">
+                            Lansman planı, içerik üretimi, metrik takibi ve iyileştirme.
+                        </div>
+                        <div class="ns-service-tags mt-3">
+                            <span class="ns-pill">Roadmap</span>
+                            <span class="ns-pill ns-pill-ghost">QA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="ns-section ns-section-alt py-5">
+        <div class="container">
+            <div class="ns-section-title mb-3">Ekip</div>
+            <h2 class="h3 fw-bold mb-4">Farklı uzmanlıklar, ortak hedef</h2>
+
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="ns-team-card">
+                        <div class="ns-avatar ns-avatar-1"></div>
+                        <div class="ns-team-name fw-semibold">Elif Kaya</div>
+                        <div class="ns-team-role text-muted ns-small">Gameplay Designer</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="ns-team-card">
+                        <div class="ns-avatar ns-avatar-2"></div>
+                        <div class="ns-team-name fw-semibold">Mert Demir</div>
+                        <div class="ns-team-role text-muted ns-small">Unity Developer</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="ns-team-card">
+                        <div class="ns-avatar ns-avatar-3"></div>
+                        <div class="ns-team-name fw-semibold">Zeynep Ak</div>
+                        <div class="ns-team-role text-muted ns-small">UI/UX & Art</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="ns-team-card">
+                        <div class="ns-avatar ns-avatar-4"></div>
+                        <div class="ns-team-name fw-semibold">Oğuzhan Yılmaz</div>
+                        <div class="ns-team-role text-muted ns-small">Production & QA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="ns-section py-5">
+        <div class="container">
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-5">
+                    <div class="ns-section-title mb-3">İletişim</div>
+                    <h2 class="h3 fw-bold mb-3">Bir fikrin var mı? Hadi planlayalım.</h2>
+                    <p class="text-muted ns-small mb-4">
+                        Aşağıdaki formdan mesaj bırak. Ekibimiz en kısa sürede geri dönecek.
+                    </p>
+
+                    <div class="ns-contact-box p-4">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="ns-contact-dot"></span>
+                            <div class="fw-semibold">E-posta</div>
+                        </div>
+                        <div class="ns-contact-value mt-2">hello@neonstrike.studio</div>
+
+                        <hr class="ns-hr">
+
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="ns-contact-dot ns-contact-dot-2"></span>
+                            <div class="fw-semibold">Çalışma Modeli</div>
+                        </div>
+                        <div class="text-muted ns-small mt-2">
+                            Prototip • Sprint • Üretim • Yayın
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="ns-form-card p-4 p-md-5">
+                        <form id="nsContactForm" class="row g-3" autocomplete="off">
+                            <div class="col-md-6">
+                                <label for="nsName" class="form-label">Ad Soyad</label>
+                                <input type="text" class="form-control ns-input" id="nsName" name="name" placeholder="Örn. Ayşe Yılmaz" autocomplete="off" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nsEmail" class="form-label">E-posta</label>
+                                <input type="email" class="form-control ns-input" id="nsEmail" name="email" placeholder="ornek@mail.com" autocomplete="off" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="nsMessage" class="form-label">Mesaj</label>
+                                <textarea class="form-control ns-input" id="nsMessage" name="message" rows="5" placeholder="Projen hakkında kısa bilgi..." autocomplete="off" required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-neon w-100">
+                                    Mesajı Gönder
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ns-footer py-4">
+        <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div class="text-muted ns-small">
+                © <span id="nsYear"></span> NeonStrike Studios. Tüm hakları saklıdır.
+            </div>
+            <div class="d-flex gap-3">
+                <a class="ns-footer-link" href="#about" data-ns-scroll>Hakkımızda</a>
+                <a class="ns-footer-link" href="#games" data-ns-scroll>Oyunlar</a>
+                <a class="ns-footer-link" href="#contact" data-ns-scroll>İletişim</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast container -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Scroll to top -->
+    <button type="button" class="btn btn-neon ns-scrolltop" id="nsScrollTop" aria-label="Yukarı çık">
+        Yukarı
+    </button>
+
+    <!-- Modals -->
+    <div class="modal fade" id="nsTrailerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content ns-modal">
+                <div class="modal-header border-0">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ns-modal-fx" id="nsGameModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered ns-game-modal-dialog">
+            <div class="modal-content ns-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="nsGameModalTitle">Oyun Detayı</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted ns-small mb-3">
+                        Oyun adı: <span class="fw-semibold" id="nsGameModalName">—</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Main.js"></script>
+</body>
+</html>
